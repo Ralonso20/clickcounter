@@ -1,23 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import clickCounterLogo from './images/clickcounter-logo.svg';
+import Button from './components/Button'
+import Counter from './components/Counter';
+import {useState} from 'react';
 
 function App() {
+
+  const [clicksNumber, setClicksNumeber] = useState(0); 
+  const clickManage = () => { setClicksNumeber(clicksNumber + 1);}
+  const resetCounter = () => { setClicksNumeber(0); }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div className='clickcounter-logo-container'>
+        <img
+          className='clickcounter-logo'
+          src={clickCounterLogo}
+          alt='Click Counter Logo'
+        />
+      </div>
+      <Counter clicksNumber={clicksNumber}/>
+
+      <div className='main-container'>
+        <Button
+          text='Click'
+          clickButton={true}
+          clickManage={clickManage}
+        />
+
+        <Button
+          text='Reset'
+          clickButton={false}
+          clickManage={resetCounter}
+        />
+      </div>
     </div>
   );
 }
