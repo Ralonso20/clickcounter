@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-html, body{
+html, 
+body{
   background-color: #3742fa;
 }
 
@@ -13,7 +14,7 @@ html, body{
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding-top: 5px;
+  padding-top: 15px;
   font-family: Lato, 'Times New Roman', Times, serif;
 }
 
@@ -22,16 +23,16 @@ html, body{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: px;
+  margin: 20px;
 }
 
 .clickcounter-logo {
-  height: 200px;
+  height: 150px;
 }
 
 .main-container {
-  height: 450px;
-  min-width: 500px;
+  height: 550px;
+  min-width: 600px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
